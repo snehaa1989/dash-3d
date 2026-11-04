@@ -1,0 +1,115 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash 3D</title>
+  </head>
+
+  <body>
+    <!-- Start Screen -->
+    <div id="start-screen">
+      <h1>DASH 3D</h1>
+      <div class="instructions">
+        <p>← → or A/D to Move</p>
+        <p>SPACE or W to Jump</p>
+        <p>S or ↓ to Slide</p>
+        <p>Double tap SPACE for Double Jump</p>
+        <p>ESC to Pause</p>
+      </div>
+      <button id="start-btn">START GAME</button>
+      <div class="high-score-display">
+        High Score: <span id="high-score">0</span>
+      </div>
+    </div>
+
+    <!-- HUD -->
+    <div id="hud" class="hidden">
+      <h1>DASH 3D</h1>
+      <div class="score-box">
+        SCORE: <span id="score">0</span>
+      </div>
+      <div class="high-score-box">
+        BEST: <span id="hud-high-score">0</span>
+      </div>
+      <div class="coins-box">
+        Coins: <span id="coins">0</span>
+      </div>
+      <div class="combo-box">
+        Combo: <span id="combo">0</span>x
+      </div>
+      <div class="level-box">
+        Level: <span id="level">1</span>
+      </div>
+      <div class="powerup-indicator" id="powerup-indicator"></div>
+      <p class="controls">
+        ← → Move &nbsp; | &nbsp; SPACE Jump &nbsp; | &nbsp; S Slide &nbsp; | &nbsp; ESC Pause
+      </p>
+    </div>
+
+    <!-- Pause Menu -->
+    <div id="pause-menu" class="hidden">
+      <h1>PAUSED</h1>
+      <button id="resume-btn">RESUME</button>
+      <button id="settings-btn">SETTINGS</button>
+      <button id="quit-btn">QUIT TO MENU</button>
+    </div>
+
+    <!-- Settings Panel -->
+    <div id="settings-panel" class="hidden">
+      <h1>SETTINGS</h1>
+      <div class="setting-item">
+        <label>Sound</label>
+        <button id="sound-toggle">ON</button>
+      </div>
+      <div class="setting-item">
+        <label>Music</label>
+        <button id="music-toggle">ON</button>
+      </div>
+      <div class="setting-item">
+        <label>Graphics Quality</label>
+        <button id="quality-btn">HIGH</button>
+      </div>
+      <button id="settings-back">BACK</button>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over" class="hidden">
+      <h1>GAME OVER</h1>
+      <p>Don't give up!</p>
+      <div class="final-stats">
+        <p>Score: <span id="final-score">0</span></p>
+        <p>Coins: <span id="final-coins">0</span></p>
+        <p>High Score: <span id="final-high-score">0</span></p>
+      </div>
+      <div class="achievements-unlocked" id="achievements-unlocked"></div>
+      <button id="restart">PLAY AGAIN</button>
+      <button id="menu-btn">MAIN MENU</button>
+    </div>
+
+    <!-- Achievements Panel -->
+    <div id="achievements-panel" class="hidden">
+      <h1>ACHIEVEMENTS</h1>
+      <div id="achievements-list"></div>
+      <button id="achievements-close">CLOSE</button>
+    </div>
+
+    <!-- Daily Challenges Panel -->
+    <div id="challenges-panel" class="hidden">
+      <h1>DAILY CHALLENGES</h1>
+      <div id="challenges-list"></div>
+      <button id="challenges-close">CLOSE</button>
+    </div>
+
+    <!-- Mobile Controls -->
+    <div id="mobile-controls" class="hidden">
+      <button id="mobile-left" class="mobile-btn">←</button>
+      <button id="mobile-jump" class="mobile-btn">JUMP</button>
+      <button id="mobile-slide" class="mobile-btn">SLIDE</button>
+      <button id="mobile-right" class="mobile-btn">→</button>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
